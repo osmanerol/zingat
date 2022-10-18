@@ -10,13 +10,11 @@ yarn install or npm install
 yarn start or npm start
 ```
 
-### Url where the project is running
-```
-[http://localhost:3000](http://localhost:3000)
-```
-
 ### Login information
 ```
 email: admin@zingat.com
 password: Admin*123
 ```
+
+### Url where the project is running
+[http://localhost:3000](http://localhost:3000)
