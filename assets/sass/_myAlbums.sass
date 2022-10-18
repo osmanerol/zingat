@@ -1,0 +1,66 @@
+.albums-page
+  display: flex
+  flex-direction: column
+  gap: 1rem
+  padding: 1rem 0
+  .main-title
+    font-size: 1.6rem
+    font-weight: $font-w-bold
+  .albums-top
+    display: flex
+    gap: 1rem
+    .box
+      padding: 1.2rem
+      background-color: $color-white
+    .links
+      display: flex
+      flex-direction: column
+      gap: .6rem
+      .link
+        font-size: 14px
+        cursor: pointer
+        font-weight: $font-w-medium
+        text-decoration: underline
+        color: $color-blue
+    .images
+      display: grid
+      gap: 1rem
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        cursor: pointer
+  .preview
+    flex: 1
+    height: 200px
+    img 
+      width: 100%
+      height: 100%
+      min-height: 300px
+      object-fit: cover
+
+@media screen and (max-width: $break-point) 
+  .albums-page
+    .albums-top
+      flex-direction: column
+      .links
+        flex: 1
+        align-items: center
+        text-align: center
+      .images
+        flex: 1
+        grid-template-columns: 1fr 1fr
+        img
+          &:nth-child(n+5)
+            display: none
+
+@media screen and (min-width: $break-point) 
+  .albums-page
+    height: calc(100vh - 2rem)
+    .albums-top
+      flex-direction: row
+      .links
+        flex: 1
+      .images
+        flex: 3
+        grid-template-columns: repeat(4, 1fr)

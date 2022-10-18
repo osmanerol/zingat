@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  div.albums-page 
+    h1.main-title My Albums and Photos
+    div.albums-top
+      div.box.links
+        each item in albums
+          span.link(onclick=`albumLinkClicked(${item.id})`)= item.title
+      div.box.images#images
+    div.preview#preview

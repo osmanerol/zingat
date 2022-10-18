@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  div.login-page
+    form(action="/login" method="post")
+      h3.title Login
+      div.input(class=errorMessage && 'error-input')
+        label(for="email") Email
+        input(type="email" id="email" name="email" required=true value=email)
+      div.input(class=errorMessage && 'error-input')
+        label(for="password") Password
+        input(type="password" id="password" name="password" required=true value=password)
+      button.button(type="submit") LOGIN
+    
+      if errorMessage
+        h4.message.error-message #{errorMessage}

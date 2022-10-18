@@ -1,0 +1,43 @@
+.login-page
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  form 
+    max-width: 480px
+    width: 100%
+    background-color: $color-white
+    display: flex
+    flex-direction: column
+    .title 
+      font-size: 1.6rem
+      font-weight: $font-w-bold
+    .button
+      background-color: $color-blue
+      color: $color-white
+
+@media screen and (max-width: $break-point) 
+  .login-page
+    form 
+      padding: 2rem
+      gap: 1.6rem
+      .input 
+        flex-direction: column
+        justify-content: flex-start
+      .button
+        width: 100%
+
+@media screen and (min-width: $break-point) 
+  .login-page
+    form 
+      padding: 3rem
+      gap: 2rem
+      .input 
+        flex-flow: row wrap
+        align-items: center
+        gap: .6rem
+        label 
+          flex: 3
+        input
+          flex: 9
